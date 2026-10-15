@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tohseno — Software Should Travel</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#F4F3EC',
+                        mint: '#EFFDF6',
+                        forest: '#243C32',
+                        darkGreen: '#14241E',
+                        acid: '#D7FF53',
+                        ink: '#17231F'
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-ivory text-ink font-sans antialiased selection:bg-acid selection:text-ink">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-md border-b border-forest/10 px-6 lg:px-16 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-none bg-forest text-acid flex items-center justify-center font-mono font-bold text-sm">⌖</div>
+            <span class="font-bold text-xl tracking-tight text-ink">TOHSENO</span>
+            <span class="hidden sm:inline-block font-mono text-xs text-forest/60 px-2 py-0.5 border border-forest/20">v0.1</span>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-forest">
+            <a href="#principles" class="hover:text-ink transition-colors">Principles</a>
+            <a href="https://docs.tohseno.com" target="_blank" class="hover:text-ink transition-colors">Docs ↗</a>
+            <a href="https://github.com/jpfraneto/tohseno" target="_blank" class="hover:text-ink transition-colors">GitHub ↗</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="https://github.com/jpfraneto/tohseno/releases" target="_blank" class="bg-forest text-acid font-mono text-xs font-semibold px-4 py-2.5 hover:bg-forest/90 transition-all flex items-center gap-2">
+                GET THE MAC APP ↗
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="px-6 lg:px-16 py-12 lg:py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-forest/70 bg-forest/5 px-3 py-1 border border-forest/10">
+                <span>A More Human Software Network</span>
+            </div>
+            
+            <h1 class="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-ink">
+                Software should <span class="italic font-normal underline decoration-2 decoration-acid underline-offset-8">travel.</span>
+            </h1>
+            
+            <p class="text-lg text-forest/80 font-normal leading-relaxed max-w-xl">
+                A direct path from the person who builds an iPhone app to the person who wants to make it their own. Open source, verifiable releases, and your own Apple identity.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="https://github.com/jpfraneto/tohseno/releases" target="_blank" class="bg-forest text-acid font-mono text-sm px-6 py-3.5 font-semibold hover:bg-forest/90 transition-all flex items-center gap-2">
+                    GET THE MAC APP ↗
+                </a>
+                <a href="https://docs.tohseno.com" target="_blank" class="border border-forest/30 text-ink font-mono text-sm px-6 py-3.5 font-semibold hover:bg-forest/5 transition-all">
+                    SEE THE PATH ↗
+                </a>
+            </div>
+
+            <div class="flex items-center gap-2 text-xs font-mono text-forest/70 pt-2">
+                <span class="text-green-600 font-bold">✓</span> No proprietary runtime. Zero credentials surrendered. Pure local Xcode toolchain.
+            </div>
+        </div>
+
+        <!-- Right Visual Diagram Card -->
+        <div class="lg:col-span-6 bg-forest p-6 lg:p-8 border border-forest relative overflow-hidden text-ivory shadow-xl">
+            <div class="absolute inset-0 bg-[radial-gradient(#D7FF53_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
+            
+            <div class="flex justify-between items-center font-mono text-xs text-acid/80 border-b border-acid/20 pb-4 mb-6">
+                <span>[FIG. 01 // ARCHITECTURAL FLOW]</span>
+                <span>VERIFIABLE</span>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-darkGreen p-4 border border-acid/20 space-y-1">
+                    <div class="font-mono text-xs text-acid">01 // SOURCE ON MAC</div>
+                    <div class="text-sm text-ivory/90 font-mono">Native SwiftUI app built via local Xcode & developer toolchain.</div>
+                </div>
+
+                <div class="flex justify-center my-1 text-acid">↓</div>
+
+                <div class="bg-darkGreen p-4 border border-acid/20 space-y-1">
+                    <div class="font-mono text-xs text-acid">02 // AUTONOMOUS LOCAL SIGNING</div>
+                    <div class="text-sm text-ivory/90 font-mono">Mac verifies release package and signs locally with your Apple ID.</div>
+                </div>
+
+                <div class="flex justify-center my-1 text-acid">↓</div>
+
+                <div class="bg-darkGreen p-4 border border-acid/20 space-y-1">
+                    <div class="font-mono text-xs text-acid">03 // NATIVE IPHONE EXECUTION</div>
+                    <div class="text-sm text-ivory/90 font-mono">Hardware enclave attested installation directly on device.</div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center font-mono text-[10px] text-acid/60 border-t border-acid/20 pt-4 mt-6">
+                <span>PIPELINE: HASH ✓ 256</span>
+                <span>STATUS: SECURE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principles Strip -->
+    <div id="principles" class="bg-acid text-ink py-4 px-6 lg:px-16 border-y border-forest/20">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs font-bold tracking-wider text-center md:text-left">
+            <div>01 / SOURCE STAYS YOURS</div>
+            <div>02 / BUILD LOCALLY</div>
+            <div>03 / VERIFY EVERY RELEASE</div>
+            <div>04 / SHARE PERSON TO PERSON</div>
+        </div>
+    </div>
+
+    <!-- Feature Cards Section -->
+    <section class="px-6 lg:px-16 py-20 max-w-7xl mx-auto space-y-12">
+        <div class="space-y-3 max-w-2xl">
+            <span class="font-mono text-xs text-forest/60 uppercase tracking-widest">Core Principles</span>
+            <h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-ink">Engineered for Structural Honesty</h2>
+            <p class="text-forest/80 text-base">Removing unnecessary complexity and opaque platforms in favor of transparent, local toolchains.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 border border-forest/15 shadow-sm space-y-6 flex flex-col justify-between hover:border-forest/40 transition-all">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 border border-forest/20 flex items-center justify-center font-mono text-forest">
+                        &lt;/&gt;
+                    </div>
+                    <h3 class="text-xl font-bold text-ink">Real apps. Real source.</h3>
+                    <p class="text-forest/80 text-sm leading-relaxed">
+                        Work directly with native SwiftUI and standard Xcode projects. Inspect every line, customize your build, and continue developing without a proprietary runtime.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-forest/10">
+                    <a href="https://github.com/jpfraneto/tohseno" target="_blank" class="font-mono text-xs font-bold text-forest hover:text-ink flex items-center gap-1">
+                        EXPLORE THE CODE ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-8 border border-forest/15 shadow-sm space-y-6 flex flex-col justify-between hover:border-forest/40 transition-all">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 border border-forest/20 flex items-center justify-center font-mono text-forest">
+                        🔒
+                    </div>
+                    <h3 class="text-xl font-bold text-ink">Your devices do the work.</h3>
+                    <p class="text-forest/80 text-sm leading-relaxed">
+                        The recipient’s Mac autonomously inspects the release, builds with Xcode, and signs with their own Apple Developer identity. Private credentials stay exclusively on hardware.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-forest/10">
+                    <a href="https://docs.tohseno.com" target="_blank" class="font-mono text-xs font-bold text-forest hover:text-ink flex items-center gap-1">
+                        READ THE SETUP GUIDE ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-8 border border-forest/15 shadow-sm space-y-6 flex flex-col justify-between hover:border-forest/40 transition-all">
+                <div class="space-y-4">
+                    <div class="w-10 h-10 border border-forest/20 flex items-center justify-center font-mono text-forest">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-bold text-ink">Know what you received.</h3>
+                    <p class="text-forest/80 text-sm leading-relaxed">
+                        Transparent distribution anchored in deterministic build provenance. Verify SHA-256 releases with certainty, ensuring the binary running on your iPhone matches the exact open-source commit.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-forest/10">
+                    <a href="https://github.com/jpfraneto/tohseno/releases" target="_blank" class="font-mono text-xs font-bold text-forest hover:text-ink flex items-center gap-1">
+                        VIEW RELEASES ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing CTA Download Section -->
+    <section class="bg-forest text-ivory py-20 px-6 lg:px-16 text-center border-t border-forest">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <span class="font-mono text-xs text-acid uppercase tracking-widest">MAKE SOMETHING WORTH PASSING ON.</span>
+            <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-ivory">Your next app. Someone’s new favorite.</h2>
+            <p class="text-ivory/80 text-base max-w-xl mx-auto">
+                Start with the current release candidate. Bring your Mac, Xcode and iPhone.
+            </p>
+            <div class="pt-4">
+                <a href="https://github.com/jpfraneto/tohseno/releases" target="_blank" class="inline-flex items-center gap-3 bg-acid text-ink font-mono font-bold text-sm px-8 py-4 hover:bg-acid/90 transition-all shadow-lg">
+                    GET THE MAC APP ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkGreen text-ivory/70 py-12 px-6 lg:px-16 border-t border-forest/40">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div class="space-y-2">
+                <div class="flex items-center gap-2 text-ivory font-bold text-lg">
+                    <span>tohseno</span>
+                </div>
+                <p class="text-xs font-mono text-ivory/50">Software belongs to its builders.</p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 font-mono text-xs text-ivory/80">
+                <a href="https://github.com/jpfraneto/tohseno" target="_blank" class="hover:text-acid transition-colors">GitHub ↗</a>
+                <a href="https://tohseno.com" target="_blank" class="hover:text-acid transition-colors">Original site ↗</a>
+                <a href="#principles" class="hover:text-acid transition-colors">Principles</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-ivory/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-ivory/40 gap-4">
+            <p>Independent redesign concept for poidh. Not the official Tohseno service.</p>
+            <p>COORDINATE: 47°22'N 8°32'E // MIT LICENSE</p>
+        </div>
+    </footer>
+
+</body>
+</html>
